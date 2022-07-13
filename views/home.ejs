@@ -10,6 +10,27 @@
     <h1>
         <%=title%> Home
     </h1>
+    <ul>
+        <% if (locals.user){ %>
+            <li>
+                <a href="/users/profile"><button><%= user.name %></button></a>
+            </li>
+            <li>
+                <a href="/users/sign-out"><button>sign out</button></a>
+            </li>
+        <% }else{ %>
+
+            <li>
+                <a href="/users/sign-up"><button>sign-up</button></a>
+            </li>
+
+            <li>
+                <a href="/users/sign-in"><button>sign-in</button></a>
+            </li>
+
+        <% } %>
+    </ul>
+    
     
 </body>
 </html>

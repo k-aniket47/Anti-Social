@@ -1,9 +1,9 @@
 const express=require('express')
 
 const router=express.Router()
-const homeControler=require('../controllers/homecontroler')
+const homeController=require('../controllers/homecontroller')
 
-router.get('/',homeControler.home)
+router.get('/',homeController.home)
 router.use('/users',require('./user'))
 
 

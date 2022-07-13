@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign in</title>
+    <title><%=title%></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-    <link rel="stylesheet" href="../static/signin.css">
+    <link rel="stylesheet" href="/signin_andup.css">
 </head>
 <body>
     <div id="login-form-wrap">
         <h2>Login</h2>
-        <form id="login-form" action="/user/create-session" method="POST">
+        <form id="login-form" action="/users/create-session" method="POST">
           <p>
           <input type="email" id="email" name="email" placeholder="Email Address" required><i class="validation"><span></span><span></span></i>
           </p>
@@ -23,7 +23,7 @@
           </p>
         </form>
         <div id="create-account-wrap">
-          <p>Not a member? <a href="#">Create Account</a><p>
+          <p>Not a member? <a href="/users/sign-up">Create Account</a><p>
         </div><!--create-account-wrap-->
       </div><!--login-form-wrap-->
       <!-- partial -->
