@@ -1,0 +1,48 @@
+#layout-header{
+    nav{
+        display: flex;
+        justify-content: space-between;
+        padding: 0 10px;
+        background: #c31432;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+        color: white;
+        box-shadow: 1px 1px 1px 1px lightgrey;
+
+        .mini-logo{
+            p{
+                margin: 5px;
+                font-family: 'Brush Script MT', cursive;
+                font-size: 2rem;
+                font-weight: bold;
+            }
+        }
+
+        .auth-links{
+            ul{
+                margin: 5% 5px;
+                display: flex;
+                list-style: none;
+
+                li{
+                    margin-right: 10px;
+                }
+            }
+        }
+
+        a{
+            color: white;
+            text-decoration: none;
+
+            button{
+                color: black;
+            }
+            button:hover{
+                box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.988);
+            }
+        }
+
+    }
+}

@@ -1,5 +1,8 @@
 body {
-    background-color: #9f9da7;
+  background: #ee9ca7;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     font-size: 1.1rem;
     font-family: "Open Sans", sans-serif;
     color: #2b3e51;
@@ -36,31 +39,43 @@ body {
   
   #login-form-wrap {
     background-color: #fff;
-    width: 35%;
-    margin: 30px auto;
+    width: 400px;
+    margin: 70px auto;
     text-align: center;
     padding: 20px 0 0 0;
-    border-radius: 4px;
+    border-radius: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     box-shadow: 0px 30px 50px 0px rgba(0, 0, 0, 0.2);
   }
   
   #login-form {
     padding: 0 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
   }
   
   input {
     display: block;
     box-sizing: border-box;
-    width: 100%;
+    width: 200px;
     outline: none;
-    height: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 50px;
     line-height: 60px;
-    border-radius: 4px;
+    border-radius: 10px;
+    position: relative;
   }
   
   input[type="password"],
+  input[type="text"],
   input[type="email"] {
-    width: 100%;
+    width: 250px;
     padding: 0 0 0 10px;
     margin: 0;
     color: #8a8b8e;
@@ -75,8 +90,9 @@ body {
     background: none;
   }
   input[type="password"]:focus,
+  input[type="text"]:focus,
   input[type="email"]:focus {
-    border-color: #3ca9e2;
+    border-color: #00ff08;
   }
   input[type="password"]:focus:invalid,
   input[type="email"]:focus:invalid {
@@ -91,7 +107,7 @@ body {
   input[type="password"]:valid ~ .validation span,
   input[type="email"]:valid ~ .validation span {
     background: #0C0;
-    position: absolute;
+    position: relative;
     border-radius: 6px;
   }
   input[type="password"]:valid ~ .validation span:first-child,
@@ -122,34 +138,42 @@ body {
     right: 15px;
     top: 0px;
   }
-  
   input[type="submit"] {
-    border: none;
+    border: 1px solid #c2c0ca;;
     display: block;
-    background-color: #3ca9e2;
-    color: #fff;
+    background-color: #fcfcfc;
+    color: rgb(36, 149, 8);
     font-weight: bold;
     text-transform: uppercase;
     cursor: pointer;
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
-    font-size: 18px;
+    font-size: 20px;
     position: relative;
     display: inline-block;
     cursor: pointer;
-    text-align: center;
+    height:55px;
+    // text-align: center;
   }
   input[type="submit"]:hover {
-    background-color: #329dd5;
+    background-color: #158507;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 0px 6px 4px rgba(255, 255, 255, 0.988);
     -webkit-transition: all 0.2s ease;
     transition: all 0.2s ease;
   }
-  
   #create-account-wrap {
     background-color: #eeedf1;
     color: #8a8b8e;
-    font-size: 14px;
+    font-size: 18px;
     width: 100%;
     padding: 10px 0;
-    border-radius: 0 0 4px 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    border-radius: 0 0 30px 30px;
+    a{
+      text-decoration: none;
+    }
   }
