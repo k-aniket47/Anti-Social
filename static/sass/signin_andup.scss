@@ -1,11 +1,15 @@
 body {
-  background: #ee9ca7;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #e9e1e1;
+background-image: linear-gradient(180deg, #e9e1e1 0%, #459dc6 50%, #000000 100%);
+
 
     font-size: 1.1rem;
     font-family: "Open Sans", sans-serif;
     color: #2b3e51;
+    
+  }
+  #main-box{
+    height: 80%;
   }
   
   h2 {

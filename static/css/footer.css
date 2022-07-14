@@ -2,15 +2,12 @@
   color: white;
   font-size: 20px;
   font-style: italic;
-  background: #c31432;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #240b36, #c31432);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #240b36, #c31432);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #050523;
+  background-image: linear-gradient(90deg, #050523 0%, #0d527c 100%);
   padding: 5px 10px;
   display: flex;
-  justify-content: flex-start; }
+  justify-content: flex-start;
+  position: relative; }
   #layout-footer a {
     color: white;
     text-decoration: none; }
