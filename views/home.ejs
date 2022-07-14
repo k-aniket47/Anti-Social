@@ -16,7 +16,7 @@
         <h4>Posts</h4>
         <% if (locals.user){%>
         <form action="/posts/create" id="new-post" method="POST">
-            <textarea name="content" cols="30" rows="3" placeholder="Type here..."></textarea>
+            <textarea name="content" cols="30" rows="3" placeholder="Type here..." required></textarea>
             <input type="submit" value="Post">
         </form>
         <%}%>
@@ -24,57 +24,21 @@
      <div id="post-container">
         <ul>
             <% for(post of posts){ %>
-                <li>
-                    <p>
-                        <% if(locals.user && locals.user.id == post.user.id){%>
-                            <small>
-                                <a href="/posts/destroy/<%=post.id%>">
-                                    <i class="fa-solid fa-circle-xmark"></i>
-                                </a>
-                            </small>
-                        <%}%>
-                        <%= post.content %>
-                        <br>
-                        <small>
-                            Posted By : 
-                            <%= post.user.name %>
-                        </small>
-
-                    </p>
-                    <div class="post-comment">
-                        <% if (locals.user){%>
-                            <i class="fa-solid fa-comment"></i>
-                            <form action="/comments/create" method="POST" id="comment">
-                                <input type="text" name="content" placeholder="Add Comment......">
-                                <input type="hidden" name="post" value="<%=post._id%>">
-                                <input type="submit" value="Comment">
-                            </form>
-                        <%}%>
-                        <div class="post-comment-list">
-                            <ul id="post-comment-<%=post._id%>">
-                                <% for (comment of post.comments){%>
-                                    <p>
-                                        <%=comment.user.name%> commented on your post : 
-                                        <%=comment.content%>
-
-                                        <% if(locals.user && locals.user.id == comment.user.id){%>
-                                            <small>
-                                                <a href="/comments/destroy/<%=comment.id%>">
-                                                    <i class="fa-regular fa-rectangle-xmark"></i>
-                                                </a>
-                                            </small>
-                                        <%}%>
-                                    </p>
-                                <%}%>
-                            </ul>
-                        
-                        </div>
-                    </div>
-                    
-                </li>
+               <%-include('post') -%>
             <%} %>
         </ul>
      </div>
+     <div>
+        <section id="user-friends">
+            <h4>Friends</h4>
+            <% for(u of all_users){%>
+                <p>
+                    <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+                </p>
+            <% } %>
+        </section>
+     </div>
+     
      <script src="https://kit.fontawesome.com/6cd81cc319.js" crossorigin="anonymous"></script>
 </body>
 </html>

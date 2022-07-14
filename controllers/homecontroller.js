@@ -1,4 +1,5 @@
 const Post =require('../models/post')
+const User = require('../models/User');
 module.exports.home= function(req,res){
     // Post.find({},function(err, posts){
     //     return res.render('home', {
@@ -20,9 +21,14 @@ module.exports.home= function(req,res){
             console.log("error in populating")
             return
         }
-        return res.render('home', {
-            title: "Anti Social | Home",
-            posts:  posts
-        });
+        User.find({}, function(err, users){
+            return res.render('home', {
+                title: "Anti Social | Home",
+                posts:  posts,
+                all_users: users
+            });
+
+        })
+        
     })
 }

@@ -1,8 +1,11 @@
 body{
-    background-color: #a7e0f5;
-background-image: linear-gradient(242deg, #a7e0f5 0%, #ffffff 100%);
-
     
+    background-color: #a7e0f5;
+    background-image: linear-gradient(242deg, #a7e0f5 0%, #ffffff 100%);
+
+    #main-box{
+        height: 100%;
+    }
     #container{
         height: 100%;
     }
