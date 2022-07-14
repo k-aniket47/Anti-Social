@@ -3,4 +3,5 @@ body {
   font-family: sans-serif;
   margin: 0; }
   body #layout-main {
+    background-color: #F0EBE3;
     height: 100%; }
