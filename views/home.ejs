@@ -8,37 +8,47 @@
     <title><%=title%></title>
 </head>
 <body>
-    <h1>
-        <%=title%>
-    </h1>
-
-    <section id="feed-posts">
-        <h4>Posts</h4>
-        <% if (locals.user){%>
-        <form action="/posts/create" id="new-post" method="POST">
-            <textarea name="content" cols="30" rows="3" placeholder="Type here..." required></textarea>
-            <input type="submit" value="Post">
-        </form>
-        <%}%>
-     </section>
-     <div id="post-container">
-        <ul>
-            <% for(post of posts){ %>
-               <%-include('post') -%>
-            <%} %>
-        </ul>
-     </div>
-     <div>
-        <section id="user-friends">
-            <h4>Friends</h4>
-            <% for(u of all_users){%>
-                <p>
-                    <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
-                </p>
-            <% } %>
-        </section>
-     </div>
-     
-     <script src="https://kit.fontawesome.com/6cd81cc319.js" crossorigin="anonymous"></script>
+    <div id="main">
+        
+        <div id="nothing">
+            <div id="text">
+                <h3>Post Something</h3>
+            </div>
+            
+            <% if (locals.user){%>
+                <form action="/posts/create" id="new-post" method="POST">
+                    <textarea name="content" cols="30" rows="3" placeholder="Type here..." required></textarea>
+                    <input type="submit" value="Post">
+                </form>
+            <%}%>
+        </div>
+        <div id="posts">
+            <section id="feed-posts">
+                <h3>Feeds</h3>
+             <div id="post-container">
+                <ul>
+                    <% for(post of posts){ %>
+                       <%-include('post') -%>
+                    <%} %>
+                </ul>
+             </div>
+            </section>
+        </div>
+        
+        <div id="friends">
+            <section id="user-friends">
+                <h3>Friends</h3>
+                <% if (locals.user){%>
+                    <% for(u of all_users){%>
+                        <p>
+                            <i class="fa-solid fa-address-card"></i>
+                            <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+                        </p>
+                    <% } %>
+                <% } %>
+            </section>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/6cd81cc319.js" crossorigin="anonymous"></script>
 </body>
 </html>
