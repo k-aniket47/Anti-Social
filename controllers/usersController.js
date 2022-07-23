@@ -60,12 +60,15 @@ module.exports.create = function(req, res){
 
 
 module.exports.createSession = function(req, res){
+    req.flash('success', 'Logged in Successfully');
     return res.redirect('/') 
 } 
 
 module.exports.destroySession = function(req, res){
+    
     req.logout(function(err) {
         if (err) { return next(err); }
+        req.flash('success', 'Logged Out');
         res.redirect('/');
     });
 }

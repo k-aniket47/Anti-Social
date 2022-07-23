@@ -9,7 +9,7 @@ module.exports.create=function(req,res){
                 post:req.body.post,
                 user:req.user._id
             },function(err,comment){
-                // if(err){console.log('error in commenting'); return}
+                if(err){console.log('error in commenting'); return}
                 post.comments.push(comment)
                 post.save()
                 res.redirect('/')
