@@ -32,7 +32,7 @@ body {
     body #posts #post-container {
       display: flex;
       justify-content: center; }
-      body #posts #post-container #post-box {
+      body #posts #post-container .post-box {
         height: auto;
         width: 500px;
         margin-top: 10px;

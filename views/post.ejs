@@ -1,8 +1,8 @@
-<li id="post-box">
+<li id="post-<%= post._id %>" class="post-box">
     <p>
         <% if(locals.user && locals.user.id == post.user.id){%>
             <small>
-                <a href="/posts/destroy/<%=post.id%>">
+                <a class="delete-post-button" href="/posts/destroy/<%=post.id%>">
                     <i class="fa-solid fa-circle-xmark"></i>
                 </a>
             </small>
@@ -28,21 +28,7 @@
         <div class="post-comment-list">
             <ul id="post-comment-<%=post._id%>">
                 <% for (comment of post.comments){%>
-                    <p>
-                        <li>
-                            <%=comment.user.name%> commented on your post : 
-                            <%=comment.content%>
-
-                            <% if(locals.user && locals.user.id == comment.user.id){%>
-                                <small>
-                                    <a href="/comments/destroy/<%=comment.id%>">
-                                        <i class="fa-regular fa-rectangle-xmark"></i>
-                                    </a>
-                                </small>
-                        </li>
-                        
-                        <%}%>
-                    </p>
+                    <%- include('comment') -%>
                 <%}%>
             </ul>
         

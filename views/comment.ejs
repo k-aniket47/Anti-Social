@@ -1,0 +1,15 @@
+<p>
+    <li id="comment-<%= comment._id %>">
+        <%=comment.user.name%> commented on your post : 
+        <%=comment.content%>
+
+        <% if(locals.user && locals.user.id == comment.user.id){%>
+            <small>
+                <a  class="delete-comment-button" href="/comments/destroy/<%=comment.id%>">
+                    <i class="fa-regular fa-rectangle-xmark"></i>
+                </a>
+            </small>
+    </li>
+    
+    <%}%>
+</p>
