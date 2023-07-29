@@ -6,29 +6,29 @@ their friends and many more. Web application with authentication and session man
 Prerequisites
 Before running the application, make sure you have the following installed:
 
--Node.js
--MongoDB
+1. Node.js
+2. MongoDB
 
 ### Setup
 
-- Clone this repository to your local machine.
+1. Clone this repository to your local machine.
 
-- Navigate to the project directory.
+2. Navigate to the project directory.
 
-- Install the required dependencies by running the following command:
+3. Install the required dependencies by running the following command:
 
 * npm install
 
 ### How to Run
 
-- Make sure your MongoDB server is running.
+1. Make sure your MongoDB server is running.
 
-- Start the Express server by running the following command:
+2. Start the Express server by running the following command:
 
 
 * npm start
   
-- The application will be available at http://localhost:8888.
+3. The application will be available at http://localhost:8888.
 
 ### Features
 * Authentication using Passport.js (Local Strategy)
