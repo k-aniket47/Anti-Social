@@ -6,8 +6,8 @@ their friends and many more. Web application with authentication and session man
 Prerequisites
 Before running the application, make sure you have the following installed:
 
-- Node.js
-- MongoDB
+-Node.js
+-MongoDB
 
 ### Setup
 
